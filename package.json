@@ -1,0 +1,26 @@
+{
+  "name": "create-express-app",
+  "version": "1.0.0",
+  "description": "CLI tool to create a basic express app",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "create-express-app": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "express",
+    "cli",
+    "create-express-app",
+    "generator"
+  ],
+  "author": "Pankaj Panday",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "ora": "^8.2.0",
+    "prompts": "^2.4.2"
+  }
+}
