@@ -94,9 +94,11 @@ export async function generateProject({ projectName, useMongoose, useCookieParse
   }
 
   // initialise git repository and create initial commit
-  if (useGit && checkGitInstalled()) {
-    execSync("git init && git add . && git commit -m 'initial commit'", { cwd: projectPath });
-  } else {
-    console.warn("⚠️ Git is not installed. Skipping git init.");
+  if (useGit) {
+    if(checkGitInstalled()) {
+      execSync("git init && git add . && git commit -m 'initial commit'", { cwd: projectPath });
+    } else {
+      console.warn("⚠️ Git is not installed. Skipping git init.");
+    }
   }
 }
